@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import placeholder from "@/public/images/placeholder.png";
+import { config } from "@/lib/config";
 
 export function Cta() {
   return (
@@ -18,11 +19,13 @@ export function Cta() {
             engaging code exploration.
           </p>
           <div className="flex gap-2">
-            <Button variant="secondary" size="default">
-              Explore Features
+            <Button variant="secondary" size="default" asChild>
+              <a href="#features">Explore Features</a>
             </Button>
-            <Button variant="default" size="default">
-              Sign Up Free
+            <Button variant="default" size="default" asChild>
+              <a href={config.app.signupUrl} target="_blank" rel="noopener noreferrer">
+                Sign Up Free
+              </a>
             </Button>
           </div>
         </div>

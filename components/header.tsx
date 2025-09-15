@@ -14,6 +14,7 @@ import {
   MobileNavbarContent,
   MobileNavbar,
 } from "@/components/ui/mobile-navbar";
+import { config } from "@/lib/config";
 
 export function Header() {
   return (
@@ -68,11 +69,15 @@ export function Header() {
         </div>
         <div className="flex flex-1 items-center justify-end">
           <div className="gap-2 hidden md:flex">
-            <Button variant="secondary" size="default">
-              Log In
+            <Button variant="secondary" size="default" asChild>
+              <a href={config.app.loginUrl} target="_blank" rel="noopener noreferrer">
+                Log In
+              </a>
             </Button>
-            <Button variant="default" size="default">
-              Get Started
+            <Button variant="default" size="default" asChild>
+              <a href={config.app.signupUrl} target="_blank" rel="noopener noreferrer">
+                Get Started
+              </a>
             </Button>
           </div>
           <MobileNavbar>
