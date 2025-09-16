@@ -1,7 +1,7 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
-import { Icon } from "@iconify/react";
+// import { Badge } from "@/components/ui/badge";
+// import { Icon } from "@iconify/react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";

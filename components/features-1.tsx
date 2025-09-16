@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Icon } from "@iconify/react";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import placeholder from "@/public/images/placeholder.png";
 
 export function Features1() {
