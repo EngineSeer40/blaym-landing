@@ -1,17 +1,21 @@
 "use client";
 
 import { Icon } from "@iconify/react";
+import Image from "next/image";
 
 export function Footer() {
   return (
     <footer className="py-10">
       <div className="container flex items-center justify-between gap-x-10 gap-y-5 flex-wrap">
         <div className="flex items-center gap-2">
-          <Icon
-            icon="solar:bolt-circle-bold-duotone"
-            className="text-primary size-7 [&>path:first-child]:opacity-100 [&>path:last-child]:fill-white rounded-full"
+          <Image
+            src="/images/blaym_logo_dark.svg"
+            alt="Blaym Logo"
+            width={32}
+            height={32}
+            className="size-8"
           />
-          <span className="font-heading text-xl font-extrabold">Logo</span>
+          <span className="font-heading text-xl font-extrabold">Blaym</span>
         </div>
         <p className="text-muted-foreground text-sm w-full text-center order-last md:w-auto md:order-none md:ml-auto">
           © 2024 Blaym. All rights reserved.

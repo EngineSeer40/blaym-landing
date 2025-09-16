@@ -13,14 +13,14 @@ import { CardContent, Card } from "@/components/ui/card";
 export function Faq() {
   return (
     <section className="relative py-20">
-      <div className="container flex flex-col items-start gap-6">
-        <div className="flex flex-col gap-3 items-start">
+      <div className="container flex flex-col items-center gap-6">
+        <div className="flex flex-col gap-3 items-center">
           <Badge className="gap-1.5 bg-primary/10 text-primary">FAQ</Badge>
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl max-w-2xl text-balance">
+          <h2 className="font-heading font-bold text-3xl sm:text-4xl max-w-2xl text-balance text-center">
             Frequently Asked Questions
           </h2>
         </div>
-        <p className="text-muted-foreground text-base max-w-xl">
+        <p className="text-muted-foreground text-base max-w-xl text-center">
           Find answers to common questions about Blaym, including features, pricing, and support.
         </p>
         <Accordion collapsible type="single" className="flex flex-col gap-4 w-full">

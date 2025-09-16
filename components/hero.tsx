@@ -65,13 +65,22 @@ export function Hero() {
         <div className="absolute inset-0 size-full bg-radial-[at_50%_50%] from-transparent via-background/5 to-background via-70% to-95%" />
       </div>
       <div className="container flex flex-col gap-6 items-center">
-        <Badge className="bg-primary/10 text-primary gap-2 pl-0.5">
+        {/* <Badge className="bg-primary/10 text-primary gap-2 pl-0.5">
           <Badge className="text-xs font-medium rounded-sm">New</Badge>
           Launching Soon
           <Icon icon="lucide:chevron-right" className="size-4" />
-        </Badge>
+        </Badge> */}
+        <div className="py-8">
+          <Image
+            src="/images/blaym_text_wide_dark_c.svg"
+            alt="Blaym - Code Streaming Platform"
+            width={400}
+            height={80}
+            className="max-w-md w-full h-auto scale-75"
+          />
+        </div>
         <h1 className="font-heading font-bold text-4xl sm:text-5xl max-w-2xl text-balance text-center">
-          Blaym: Code Streaming, Reimagined.
+          Code Streaming, Reimagined.
         </h1>
         <p className="text-muted-foreground text-base sm:text-lg max-w-xl text-balance text-center">
           Stream your coding process, showcase your work, and replay coding sessions. Make code
@@ -96,16 +105,20 @@ export function Hero() {
               onChange={(e) => setEmail(e.target.value)}
               required
             />
-            <Button variant="default" size="default" type="submit" disabled={isSubmitting}>
+            <Button variant="default" size="default" type="submit" disabled={isSubmitting} className="hover:bg-purple hover:text-purple-foreground">
               {isSubmitting ? "Joining..." : "Join the Waitlist"}
             </Button>
           </form>
         )}
-        <Image
-          src={placeholder}
-          alt="placeholder Image"
-          className="rounded-md mt-4 max-w-4xl w-full"
-        />
+        <div className="mt-8 flex flex-col items-center gap-6">
+          <div className="bg-gradient-to-r from-primary/20 to-primary/5 rounded-lg p-8 max-w-4xl w-full">
+            <Image
+              src={placeholder}
+              alt="Blaym Platform Preview"
+              className="rounded-md w-full h-auto"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

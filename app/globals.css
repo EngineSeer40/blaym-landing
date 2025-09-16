@@ -22,6 +22,8 @@
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-destructive-foreground: var(--destructive-foreground);
+  --color-purple: var(--purple);
+  --color-purple-foreground: var(--purple-foreground);
   --font-heading: var(--font-heading);
   --font-body: var(--font-body);
   --radius-sm: calc(var(--radius) - 4px);
@@ -102,6 +104,8 @@
   --primary-foreground: hsl(0 0% 0%);
   --secondary-foreground: hsl(0 0% 98%);
   --destructive-foreground: hsl(0 0% 98%);
+  --purple: #b86afa;
+  --purple-foreground: hsl(0 0% 0%);
   --radius: 0.6rem;
 }
 

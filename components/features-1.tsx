@@ -53,11 +53,6 @@ export function Features1() {
               </p>
             </div>
           </div>
-          <div>
-            <Button variant="default" size="default">
-              Start Streaming
-            </Button>
-          </div>
         </div>
       </div>
     </section>

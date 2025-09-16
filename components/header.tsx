@@ -1,6 +1,7 @@
 "use client";
 
 import { Icon } from "@iconify/react";
+import Image from "next/image";
 import {
   NavigationMenuLink,
   NavigationMenuItem,
@@ -22,11 +23,14 @@ export function Header() {
       <div className="container flex items-center justify-between gap-10">
         <div className="flex-1">
           <div className="flex items-center gap-2">
-            <Icon
-              icon="solar:bolt-circle-bold-duotone"
-              className="text-primary size-7 [&>path:first-child]:opacity-100 [&>path:last-child]:fill-white rounded-full"
+            <Image
+              src="/images/blaym_logo_dark.svg"
+              alt="Blaym Logo"
+              width={32}
+              height={32}
+              className="size-8"
             />
-            <span className="font-heading text-xl font-extrabold">Logo</span>
+            <span className="font-heading text-xl font-extrabold">Blaym</span>
           </div>
         </div>
         <div className="flex items-center justify-center">
@@ -34,16 +38,24 @@ export function Header() {
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuLink
-                  href="#about"
-                  className="inline-flex h-9 font-medium w-max items-center justify-center px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-transparent"
+                  href="/"
+                  className="inline-flex h-9 font-medium w-max items-center justify-center px-4 py-2 text-sm text-muted-foreground hover:text-purple hover:bg-transparent"
                 >
-                  About
+                  Home
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink
+                  href="/about"
+                  className="inline-flex h-9 font-medium w-max items-center justify-center px-4 py-2 text-sm text-muted-foreground hover:text-purple hover:bg-transparent"
+                >
+                  About
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              {/* <NavigationMenuItem>
+                <NavigationMenuLink
                   href="#pricing"
-                  className="inline-flex h-9 font-medium w-max items-center justify-center px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-transparent"
+                  className="inline-flex h-9 font-medium w-max items-center justify-center px-4 py-2 text-sm text-muted-foreground hover:text-purple hover:bg-transparent"
                 >
                   Pricing
                 </NavigationMenuLink>
@@ -51,15 +63,15 @@ export function Header() {
               <NavigationMenuItem>
                 <NavigationMenuLink
                   href="#community"
-                  className="inline-flex h-9 font-medium w-max items-center justify-center px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-transparent"
+                  className="inline-flex h-9 font-medium w-max items-center justify-center px-4 py-2 text-sm text-muted-foreground hover:text-purple hover:bg-transparent"
                 >
                   Community
                 </NavigationMenuLink>
-              </NavigationMenuItem>
+              </NavigationMenuItem> */}
               <NavigationMenuItem>
                 <NavigationMenuLink
-                  href="#contact"
-                  className="inline-flex h-9 font-medium w-max items-center justify-center px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-transparent"
+                  href="/contact"
+                  className="inline-flex h-9 font-medium w-max items-center justify-center px-4 py-2 text-sm text-muted-foreground hover:text-purple hover:bg-transparent"
                 >
                   Contact
                 </NavigationMenuLink>
@@ -74,7 +86,7 @@ export function Header() {
                 Log In
               </a>
             </Button>
-            <Button variant="default" size="default" asChild>
+            <Button variant="default" size="default" asChild className="hover:bg-purple hover:text-purple-foreground">
               <a href={config.app.signupUrl} target="_blank" rel="noopener noreferrer">
                 Get Started
               </a>
@@ -92,25 +104,30 @@ export function Header() {
                 <NavigationMenu className="w-full max-w-none items-stretch flex-col">
                   <NavigationMenuList className="flex flex-col gap-1 w-full items-start space-x-0">
                     <NavigationMenuItem className="w-full">
-                      <NavigationMenuLink href="#about" className="flex font-medium text-xl p-2">
-                        About
+                      <NavigationMenuLink href="/" className="flex font-medium text-xl p-2 hover:text-purple">
+                        Home
                       </NavigationMenuLink>
                     </NavigationMenuItem>
                     <NavigationMenuItem className="w-full">
-                      <NavigationMenuLink href="#pricing" className="flex font-medium text-xl p-2">
+                      <NavigationMenuLink href="/about" className="flex font-medium text-xl p-2 hover:text-purple">
+                        About
+                      </NavigationMenuLink>
+                    </NavigationMenuItem>
+                    {/* <NavigationMenuItem className="w-full">
+                      <NavigationMenuLink href="#pricing" className="flex font-medium text-xl p-2 hover:text-purple">
                         Pricing
                       </NavigationMenuLink>
                     </NavigationMenuItem>
                     <NavigationMenuItem className="w-full">
                       <NavigationMenuLink
                         href="#community"
-                        className="flex font-medium text-xl p-2"
+                        className="flex font-medium text-xl p-2 hover:text-purple"
                       >
                         Community
                       </NavigationMenuLink>
-                    </NavigationMenuItem>
+                    </NavigationMenuItem> */}
                     <NavigationMenuItem className="w-full">
-                      <NavigationMenuLink href="#contact" className="flex font-medium text-xl p-2">
+                      <NavigationMenuLink href="/contact" className="flex font-medium text-xl p-2 hover:text-purple">
                         Contact
                       </NavigationMenuLink>
                     </NavigationMenuItem>
