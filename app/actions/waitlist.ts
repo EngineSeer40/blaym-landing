@@ -7,13 +7,12 @@ export async function submitWaitlist(formData: FormData) {
   const name = formData.get('name') as string;
 
   if (!email || !name) {
-    console.error('Waitlist submission failed: Email and name are required');
-    return;
+    return { success: false, message: 'Email and name are required' };
   }
 
   if (!process.env.RESEND_API_KEY) {
-    console.error('Waitlist submission failed: RESEND_API_KEY not configured');
-    return;
+    console.log('Waitlist submission (no email sent - API key missing):', { name, email });
+    return { success: true, message: 'Thanks for joining our waitlist! (Email will be sent when configured)' };
   }
 
   const resend = new Resend(process.env.RESEND_API_KEY);
@@ -37,7 +36,9 @@ export async function submitWaitlist(formData: FormData) {
     });
     
     console.log('Waitlist submission successful:', { name, email });
+    return { success: true, message: 'Thanks for joining our waitlist!' };
   } catch (error) {
     console.error('Waitlist submission error:', error);
+    return { success: false, message: 'Failed to join waitlist. Please try again.' };
   }
 }

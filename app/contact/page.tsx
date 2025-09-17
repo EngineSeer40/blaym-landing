@@ -1,11 +1,35 @@
+"use client";
+
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { submitContact } from "@/app/actions/contact";
+import { useState } from "react";
+import toast from "react-hot-toast";
 
 export default function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (formData: FormData) => {
+    setIsSubmitting(true);
+    try {
+      const result = await submitContact(formData);
+      if (result.success) {
+        toast.success(result.message);
+        // Reset form
+        const form = document.getElementById('contact-form') as HTMLFormElement;
+        if (form) form.reset();
+      } else {
+        toast.error(result.message);
+      }
+    } catch {
+      toast.error("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <>
@@ -24,7 +48,7 @@ export default function Contact() {
           </div>
 
           <div className="w-full max-w-2xl">
-            <form action={submitContact} className="space-y-6">
+            <form id="contact-form" action={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2">
@@ -84,9 +108,10 @@ export default function Contact() {
               
               <Button 
                 type="submit"
+                disabled={isSubmitting}
                 className="w-full hover:bg-purple hover:text-purple-foreground"
               >
-                Send Message
+                {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
           </div>

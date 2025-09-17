@@ -1,10 +1,31 @@
+"use client";
+
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import placeholder from "@/public/images/placeholder.png";
 import { submitWaitlist } from "@/app/actions/waitlist";
+import { useState } from "react";
+import toast from "react-hot-toast";
 
 export function Hero() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (formData: FormData) => {
+    setIsSubmitting(true);
+    try {
+      const result = await submitWaitlist(formData);
+      if (result.success) {
+        toast.success(result.message);
+      } else {
+        toast.error(result.message);
+      }
+    } catch {
+      toast.error("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section className="relative py-20">
@@ -52,7 +73,7 @@ export function Hero() {
           Stream your coding process, showcase your work, and replay coding sessions. Make code
           exploration transparent, searchable, and deeply engaging.
         </p>
-        <form action={submitWaitlist} className="flex flex-col gap-4 max-w-md w-full">
+        <form action={handleSubmit} className="flex flex-col gap-4 max-w-md w-full">
           <div className="flex gap-2">
             <Input 
               name="name"
@@ -69,8 +90,8 @@ export function Hero() {
               required
             />
           </div>
-          <Button variant="default" size="default" type="submit" className="hover:bg-purple hover:text-purple-foreground">
-            Join the Waitlist
+          <Button variant="default" size="default" type="submit" disabled={isSubmitting} className="hover:bg-purple hover:text-purple-foreground">
+            {isSubmitting ? "Joining..." : "Join the Waitlist"}
           </Button>
         </form>
         <div className="mt-8 flex flex-col items-center gap-6">

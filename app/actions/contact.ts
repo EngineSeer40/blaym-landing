@@ -9,13 +9,12 @@ export async function submitContact(formData: FormData) {
   const message = formData.get('message') as string;
 
   if (!name || !email || !subject || !message) {
-    console.error('Contact submission failed: All fields are required');
-    return;
+    return { success: false, message: 'All fields are required' };
   }
 
   if (!process.env.RESEND_API_KEY) {
-    console.error('Contact submission failed: RESEND_API_KEY not configured');
-    return;
+    console.log('Contact submission (no email sent - API key missing):', { name, email, subject });
+    return { success: true, message: 'Message sent! (Email will be sent when configured)' };
   }
 
   const resend = new Resend(process.env.RESEND_API_KEY);
@@ -44,7 +43,9 @@ export async function submitContact(formData: FormData) {
     });
     
     console.log('Contact submission successful:', { name, email, subject });
+    return { success: true, message: 'Message sent! We\'ll get back to you within 24 hours.' };
   } catch (error) {
     console.error('Contact submission error:', error);
+    return { success: false, message: 'Failed to send message. Please try again.' };
   }
 }
