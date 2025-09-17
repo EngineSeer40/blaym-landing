@@ -1,44 +1,10 @@
-"use client";
-
-// import { Badge } from "@/components/ui/badge";
-// import { Icon } from "@iconify/react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import placeholder from "@/public/images/placeholder.png";
-import { config } from "@/lib/config";
-import { useState } from "react";
+import { submitWaitlist } from "@/app/actions/waitlist";
 
 export function Hero() {
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleWaitlistSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email) return;
-    
-    setIsSubmitting(true);
-    try {
-      // Replace with your actual waitlist API endpoint
-      const response = await fetch(config.waitlist.apiUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
-      });
-      
-      if (response.ok) {
-        setIsSubmitted(true);
-        setEmail("");
-      }
-    } catch (error) {
-      console.error('Waitlist signup failed:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   return (
     <section className="relative py-20">
@@ -86,30 +52,27 @@ export function Hero() {
           Stream your coding process, showcase your work, and replay coding sessions. Make code
           exploration transparent, searchable, and deeply engaging.
         </p>
-        {isSubmitted ? (
-          <div className="flex flex-col items-center gap-2">
-            <p className="text-green-500 font-medium">Thanks for joining our waitlist!</p>
-            <Button variant="default" size="default" asChild>
-              <a href={config.app.dashboardUrl} target="_blank" rel="noopener noreferrer">
-                Get Early Access
-              </a>
-            </Button>
-          </div>
-        ) : (
-          <form onSubmit={handleWaitlistSubmit} className="flex gap-2">
+        <form action={submitWaitlist} className="flex flex-col gap-4 max-w-md w-full">
+          <div className="flex gap-2">
             <Input 
-              type="email"
-              placeholder="Enter your email" 
-              className="bg-secondary border-none min-w-54"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              name="name"
+              type="text"
+              placeholder="Your name" 
+              className="bg-secondary border-none flex-1"
               required
             />
-            <Button variant="default" size="default" type="submit" disabled={isSubmitting} className="hover:bg-purple hover:text-purple-foreground">
-              {isSubmitting ? "Joining..." : "Join the Waitlist"}
-            </Button>
-          </form>
-        )}
+            <Input 
+              name="email"
+              type="email"
+              placeholder="Your email" 
+              className="bg-secondary border-none flex-1"
+              required
+            />
+          </div>
+          <Button variant="default" size="default" type="submit" className="hover:bg-purple hover:text-purple-foreground">
+            Join the Waitlist
+          </Button>
+        </form>
         <div className="mt-8 flex flex-col items-center gap-6">
           <div className="bg-gradient-to-r from-primary/20 to-primary/5 rounded-lg p-8 max-w-4xl w-full">
             <Image
