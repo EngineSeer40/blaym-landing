@@ -133,6 +133,18 @@ export function Header() {
                     </NavigationMenuItem>
                   </NavigationMenuList>
                 </NavigationMenu>
+                <div className="flex flex-col gap-3 mt-6">
+                  <Button variant="secondary" size="default" asChild className="w-full">
+                    <a href={config.app.loginUrl} target="_blank" rel="noopener noreferrer">
+                      Log In
+                    </a>
+                  </Button>
+                  <Button variant="default" size="default" asChild className="w-full hover:bg-purple hover:text-purple-foreground">
+                    <a href={config.app.signupUrl} target="_blank" rel="noopener noreferrer">
+                      Get Started
+                    </a>
+                  </Button>
+                </div>
               </div>
             </MobileNavbarContent>
           </MobileNavbar>

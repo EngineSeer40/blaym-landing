@@ -57,32 +57,27 @@ export default function About() {
           </div>
 
           <div className="w-full max-w-4xl">
-            <h2 className="font-heading font-bold text-2xl sm:text-3xl mb-8 text-center text-purple">
-              Meet the Founder
-            </h2>
             <div className="bg-card rounded-lg p-8 border">
               <div className="flex flex-col md:flex-row gap-6 items-start">
-                <div className="w-32 h-32 bg-gradient-to-br from-primary/20 to-purple/20 rounded-full flex items-center justify-center mx-auto md:mx-0">
+                <div className="w-56 h-56 rounded-full overflow-hidden mx-auto md:mx-0">
                   <Image
-                    src="/images/blaym_logo_dark.svg"
-                    alt="Founder"
-                    width={64}
-                    height={64}
-                    className="opacity-80"
+                    src="/images/founder.jpg"
+                    alt="Founder - Gary Pate"
+                    width={224}
+                    height={224}
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="flex-1 space-y-4">
-                  <h3 className="font-heading font-bold text-xl">Founder & CEO</h3>
+                  <h3 className="font-heading font-bold text-xl">Founder - Gary Pate</h3>
                   <p className="text-muted-foreground text-base">
-                    A passionate developer with over a decade of experience in software engineering 
-                    and developer tools. The idea for Blaym came from years of frustration with 
-                    traditional code sharing methods that only showed the final result, not the 
-                    creative process behind it.
+                    After several frustrating experiences working as an engineer, I realised that developers and coders 
+                    did not have an easy way to showcase their work. Not everyone has the time 
+                    to set up screen recording and even then such mediums have limited functionality.
+                    Blaym was born from this realisation.
                   </p>
                   <p className="text-muted-foreground text-base">
-                    "I wanted to create a platform where developers could share not just what they 
-                    built, but how they built it. The journey of problem-solving, debugging, and 
-                    iteration is where the real learning happens."
+                    "I wanted to make a place where new and seasoned developers could learn and network. I wanted coding to be cool again"
                   </p>
                 </div>
               </div>

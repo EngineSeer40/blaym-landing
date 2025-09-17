@@ -3,7 +3,7 @@
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import placeholder from "@/public/images/placeholder.png";
+import dashboard from "@/public/images/dashboard.png";
 import { submitWaitlist } from "@/app/actions/waitlist";
 import { useState } from "react";
 import toast from "react-hot-toast";
@@ -94,12 +94,15 @@ export function Hero() {
             {isSubmitting ? "Joining..." : "Join the Waitlist"}
           </Button>
         </form>
-        <div className="mt-8 flex flex-col items-center gap-6">
-          <div className="bg-gradient-to-r from-primary/20 to-primary/5 rounded-lg p-8 max-w-4xl w-full">
+        <div className="mt-16 flex flex-col items-center gap-6">
+          <div className="max-w-full w-full relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/11 via-primary/5 to-primary/11 rounded-md blur-2xl scale-150 -z-10"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-primary/7 via-transparent to-primary/7 rounded-md blur-lg scale-150 -z-10"></div>
+            <div className="absolute inset-0 bg-gradient-radial from-primary/7 via-primary/2 to-transparent rounded-md blur-3xl scale-175 -z-10"></div>
             <Image
-              src={placeholder}
+              src={dashboard}
               alt="Blaym Platform Preview"
-              className="rounded-md w-full h-auto"
+              className="rounded-lg w-full h-auto shadow-2xl scale-150 relative z-10 border border-white/50"
             />
           </div>
         </div>
