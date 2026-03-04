@@ -23,7 +23,7 @@ export function Features() {
               <Icon icon="lucide:layout-grid" className="size-4" />
             </div>
             <div className="flex flex-col gap-1">
-              <h3 className="font-semibold text-lg">Pre-made Sections</h3>
+              <h3 className="font-semibold text-lg">Replayable Sessions</h3>
               <p className="text-muted-foreground text-base">
                 Lorem ipsum dolor sit amet, consecter adipis elit. Aene nulla diam, lacinia vitae.
               </p>
@@ -34,7 +34,7 @@ export function Features() {
               <Icon icon="lucide:sparkles" className="size-4" />
             </div>
             <div className="flex flex-col gap-1">
-              <h3 className="font-semibold text-lg">AI Builder</h3>
+              <h3 className="font-semibold text-lg">AI Integrations</h3>
               <p className="text-muted-foreground text-base">
                 Lorem ipsum dolor sit amet, consecter adipis elit. Aene nulla diam, lacinia vitae.
               </p>
@@ -45,7 +45,7 @@ export function Features() {
               <Icon icon="lucide:pencil-ruler" className="size-4" />
             </div>
             <div className="flex flex-col gap-1">
-              <h3 className="font-semibold text-lg">Easy customization</h3>
+              <h3 className="font-semibold text-lg">Solo or Team</h3>
               <p className="text-muted-foreground text-base">
                 Lorem ipsum dolor sit amet, consecter adipis elit. Aene nulla diam, lacinia vitae.
               </p>
@@ -56,7 +56,7 @@ export function Features() {
               <Icon icon="lucide:palette" className="size-4" />
             </div>
             <div className="flex flex-col gap-1">
-              <h3 className="font-semibold text-lg">Themes Library</h3>
+              <h3 className="font-semibold text-lg">Branching Streams</h3>
               <p className="text-muted-foreground text-base">
                 Lorem ipsum dolor sit amet, consecter adipis elit. Aene nulla diam, lacinia vitae.
               </p>

@@ -14,11 +14,11 @@ export default function About() {
             <h1 className="font-heading font-bold text-4xl sm:text-5xl max-w-2xl text-balance">
               About Blaym
             </h1>
-            <p className="text-muted-foreground text-base sm:text-lg max-w-2xl text-balance">
+            {/* <p className="text-muted-foreground text-base sm:text-lg max-w-2xl text-balance">
               Blaym was born from a vision to make coding more transparent, collaborative, and engaging. 
               We believe that the best way to learn and improve as developers is by sharing our process, 
               not just our results.
-            </p>
+            </p> */}
           </div>
 
           <div className="flex flex-col lg:flex-row gap-12 items-center max-w-6xl">
@@ -34,23 +34,12 @@ export default function About() {
             <div className="flex-1 space-y-6">
               <div>
                 <h2 className="font-heading font-bold text-2xl sm:text-3xl mb-4 text-purple">
-                  Our Mission
-                </h2>
-                <p className="text-muted-foreground text-base">
-                  To revolutionize how developers share, learn, and collaborate by creating a platform 
-                  that captures the entire coding journey. We're building tools that make code streaming, 
-                  session replay, and knowledge sharing seamless and engaging.
-                </p>
-              </div>
-              
-              <div>
-                <h2 className="font-heading font-bold text-2xl sm:text-3xl mb-4 text-purple">
                   The Vision
                 </h2>
                 <p className="text-muted-foreground text-base">
-                  Imagine a world where every coding session becomes a learning opportunity, where 
-                  developers can easily share their thought process, and where the community can 
-                  learn from real-world problem-solving in action.
+                  A neat little platform that captures the entire coding journey. That makes code streaming, 
+                  session replay, and knowledge sharing seamless and engaging. Between Vibe coding, live streaming 
+                  and version control, there is a gap that Blaym fills.
                 </p>
               </div>
             </div>
@@ -61,7 +50,7 @@ export default function About() {
               <div className="flex flex-col md:flex-row gap-6 items-start">
                 <div className="w-56 h-56 rounded-full overflow-hidden mx-auto md:mx-0">
                   <Image
-                    src="/images/founder.jpg"
+                    src="/images/founder_bw.jpg"
                     alt="Founder - Gary Pate"
                     width={224}
                     height={224}
@@ -71,13 +60,11 @@ export default function About() {
                 <div className="flex-1 space-y-4">
                   <h3 className="font-heading font-bold text-xl">Founder - Gary Pate</h3>
                   <p className="text-muted-foreground text-base">
-                    After several frustrating experiences working as an engineer, I realised that developers and coders 
-                    did not have an easy way to showcase their work. Not everyone has the time 
-                    to set up screen recording and even then such mediums have limited functionality.
-                    Blaym was born from this realisation.
+                    With over a decade in software, data, and analytics, I saw a clear gap: developers lacked a simple, engaging way to share their craft. Existing tools felt 
+                    enterprise heavy or required too much setup. Blaym was created to make showcasing and journaling code effortless, powerful, and enjoyable.
                   </p>
                   <p className="text-muted-foreground text-base">
-                    "I wanted to make a place where new and seasoned developers could learn and network. I wanted coding to be cool again"
+                    I wanted to create a space where developers could document, share and have fun with their code.
                   </p>
                 </div>
               </div>

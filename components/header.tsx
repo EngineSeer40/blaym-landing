@@ -46,6 +46,14 @@ export function Header() {
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink
+                  href="/get-started"
+                  className="inline-flex h-9 font-medium w-max items-center justify-center px-4 py-2 text-sm text-muted-foreground hover:text-purple hover:bg-transparent"
+                >
+                  Get Started
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLink
                   href="/about"
                   className="inline-flex h-9 font-medium w-max items-center justify-center px-4 py-2 text-sm text-muted-foreground hover:text-purple hover:bg-transparent"
                 >
@@ -106,6 +114,14 @@ export function Header() {
                     <NavigationMenuItem className="w-full">
                       <NavigationMenuLink href="/" className="flex font-medium text-xl p-2 hover:text-purple">
                         Home
+                      </NavigationMenuLink>
+                    </NavigationMenuItem>
+                    <NavigationMenuItem className="w-full">
+                      <NavigationMenuLink
+                        href="/get-started"
+                        className="flex font-medium text-xl p-2 hover:text-purple"
+                      >
+                        Get Started
                       </NavigationMenuLink>
                     </NavigationMenuItem>
                     <NavigationMenuItem className="w-full">
