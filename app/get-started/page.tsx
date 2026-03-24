@@ -35,11 +35,11 @@ function StepImage({
       <button
         type="button"
         onClick={() => setIsOpen(true)}
-        className={`${sizeClassName ?? "w-full md:w-[70%] lg:w-[70%] xl:w-[65%]"} block rounded-lg border bg-card p-3 mx-auto text-left`}
+        className={`${sizeClassName ?? "w-full md:w-[70%] lg:w-[70%] xl:w-[65%]"} block rounded-lg border bg-card p-3 mr-auto text-left`}
         aria-label={`Open ${alt} image in larger view`}
       >
         <Image src={src} alt={alt} width={1200} height={700} className="w-full h-auto rounded-md" />
-        <p className="mt-2 text-xs text-muted-foreground text-center">Click image to enlarge</p>
+        <p className="mt-2 text-xs text-muted-foreground text-left">Click image to enlarge</p>
       </button>
 
       {isOpen ? (
@@ -67,34 +67,35 @@ export default function GetStarted() {
     <>
       <Header />
       <main className="py-20">
-        <div className="container flex flex-col gap-12 items-center">
-          <div className="flex flex-col gap-6 items-center text-center max-w-4xl">
+        <div className="container flex flex-col gap-12 items-start">
+          <div className="flex flex-col gap-6 items-start text-left max-w-4xl">
             <Badge className="gap-1.5 bg-primary/10 text-primary">Get Started</Badge>
             <h1 className="font-heading font-bold text-4xl sm:text-5xl max-w-3xl text-balance">
               Blaym for VS Code Walkthrough
             </h1>
+            <p className="text-muted-foreground max-w-2xl">
+              Start your first session in minutes. Follow the flow, click any screenshot to expand, and you are live.
+            </p>
           </div>
 
-          <div className="w-full max-w-4xl space-y-14 text-muted-foreground text-base">
+          <div className="w-full max-w-4xl space-y-14 text-muted-foreground text-base [&_p]:text-balance">
           <section className="space-y-6">
               <h2 className="font-heading font-bold text-2xl sm:text-3xl text-foreground">Install Extension</h2>
-              <ol className="list-decimal list-outside pl-6 space-y-8">
+              <ol className="list-decimal list-outside pl-6 space-y-8 text-left">
                 <li className="space-y-6">
-                <p>
-                  Search for Blaym in the VS Code Marketplace.
-                </p>
+                  <p>Search for Blaym in the VS Code Marketplace.</p>
                   <StepImage src="/images/get-started/Marketplace_clip.png" alt="Search Market" sizeClassName="w-full md:w-[60%] lg:w-[55%] xl:w-[50%]"/>
                 </li>
               </ol>
             </section>
             
             <section className="space-y-6">
-              <h2 className="font-heading font-bold text-2xl sm:text-3xl text-foreground">Connect from VSCode</h2>
-              <ol className="list-decimal list-outside pl-6 space-y-8">
+              <h2 className="font-heading font-bold text-2xl sm:text-3xl text-foreground">Connect as Host</h2>
+              <ol className="list-decimal list-outside pl-6 space-y-8 text-left">
                 <li className="space-y-6">
                   <p>
-                    Once installed, go to the Blaym sidepanel and click <strong>Connect to Blaym</strong>. You may
-                    need to enter the invite code you were sent.
+                    Open the Blaym side panel and click <strong>Connect to Blaym</strong>. If prompted, enter your
+                    invite code.
                   </p>
                   <StepImage src="/images/get-started/SidebarPanel_clip.png" alt="Connect prompt" sizeClassName="w-full md:w-[60%] lg:w-[55%] xl:w-[50%]"/>
 
@@ -105,9 +106,10 @@ export default function GetStarted() {
                 </li>
                 <li className="space-y-6">
                   <p>
-                    Log in with a valid Google or GitHub account. Once you log in and choose a username, you are taken
-                    to your dashboard. Start a live session by pressing <strong>Start Session</strong>.
+                    Sign in with Google or GitHub. In your workspace, press <strong>Go Live</strong>, then{" "}
+                    <strong>Start Session</strong> in the lobby.
                   </p>
+                  <StepImage src="/images/get-started/image22.png" alt="Go Live in workspace" sizeClassName="w-full md:w-[55%] lg:w-[50%] xl:w-[45%]" />
                   <StepImage src="/images/get-started/image6.png" alt="Start session dashboard" />
                 </li>
               </ol>
@@ -121,18 +123,17 @@ export default function GetStarted() {
                   recording has started.
                 </p>
               </div>
-              <ol className="list-decimal list-outside pl-6 space-y-8">
+              <ol className="list-decimal list-outside pl-6 space-y-8 text-left">
                 <li className="space-y-6">
                   <p>
-                    By default, the app begins recording your added files and branches immediately. You can then start
-                    adding files and creating branches.
+                    Once recording starts, Blaym captures file edits and branch activity in real time.
                   </p>
                   <StepImage src="/images/get-started/image4.png" alt="Live recording active" sizeClassName="w-full md:w-[50%] lg:w-[45%] xl:w-[40%]"/>
                 </li>
                 <li className="space-y-6">
                   <p>
-                    When the session is done, press stop recording. You are asked to confirm and enter a session name.
-                    After the session ends and the host leaves, the session is saved to the user&apos;s profile.
+                    When you are done, press stop recording, confirm, and name the session. After the host leaves, the
+                    session is saved to the profile.
                   </p>
                   <StepImage src="/images/get-started/image7.png" alt="Stop recording" sizeClassName="w-full md:w-[60%] lg:w-[55%] xl:w-[50%]"/>
                   <StepImage src="/images/get-started/image10.png" alt="Save session dialog" sizeClassName="w-full md:w-[60%] lg:w-[55%] xl:w-[50%]"/>
@@ -142,11 +143,11 @@ export default function GetStarted() {
 
             <section className="space-y-6">
               <h2 className="font-heading font-bold text-2xl sm:text-3xl text-foreground">Adding Files to Session</h2>
-              <ol className="list-decimal list-outside pl-6 space-y-8">
+              <ol className="list-decimal list-outside pl-6 space-y-8 text-left">
                 <li className="space-y-6">
                   <p>
-                    Once the web interface is loaded, return to VS Code and add files to the session. These files
-                    appear in the live session, and tabs update as you edit code.
+                    Once the web app loads, return to VS Code and add files. They appear in-session instantly, and tabs
+                    update while you edit.
                   </p>
                   <StepImage src="/images/get-started/image13.png" alt="Add files to stream" />
                 </li>
@@ -155,19 +156,18 @@ export default function GetStarted() {
 
             <section className="space-y-6">
               <h2 className="font-heading font-bold text-2xl sm:text-3xl text-foreground">Creating a Branch</h2>
-              <ol className="list-decimal list-outside pl-6 space-y-8">
+              <ol className="list-decimal list-outside pl-6 space-y-8 text-left">
                 <li className="space-y-6">
                   <p>
-                    To add a new branch from the current branch (default <code>main</code>), click{" "}
-                    <strong>Create Branch</strong> and enter a name. When switching branches, expect a short pause
-                    while backend state updates in VS Code.
+                    From your current branch (default <code>main</code>), click <strong>Create Branch</strong> and
+                    enter a name. Switching branches can take a short moment while VS Code state refreshes.
                   </p>
                   <StepImage src="/images/get-started/image12.png" alt="Create branch in sidebar" />
                 </li>
                 <li className="space-y-6">
                   <p>
-                    Branches can be viewed independently in the web app from branch/file tabs or the branching
-                    timeline. To exit navigation mode and return to host navigation, press <strong>Live</strong>.
+                    View each branch independently in the web app from branch/file tabs or the timeline. To follow the
+                    host again, press <strong>Live</strong>.
                   </p>
                   <StepImage src="/images/get-started/image2.png" alt="Branch and file view" sizeClassName="w-full md:w-[40%] lg:w-[35%] xl:w-[30%]"/>
                   <StepImage src="/images/get-started/image16.png" alt="Branch timeline view"sizeClassName="w-full md:w-[80%] lg:w-[75%] xl:w-[70%]" />
@@ -178,11 +178,11 @@ export default function GetStarted() {
 
             <section className="space-y-6">
               <h2 className="font-heading font-bold text-2xl sm:text-3xl text-foreground">Adding a Checkpoint</h2>
-              <ol className="list-decimal list-outside pl-6 space-y-8">
+              <ol className="list-decimal list-outside pl-6 space-y-8 text-left">
                 <li className="space-y-6">
                   <p>
-                    Checkpoints can be set by the host to revert code state, and by viewers to navigate backward and
-                    forward through session history.
+                    Add checkpoints to mark key moments. Hosts can restore previous states, and viewers can jump through
+                    session history.
                   </p>
                   <StepImage src="/images/get-started/image14.png" alt="Set checkpoint" />
                   <StepImage src="/images/get-started/image15.png" alt="Checkpoint actions" />
@@ -193,28 +193,55 @@ export default function GetStarted() {
 
             <section className="space-y-6">
               <h2 className="font-heading font-bold text-2xl sm:text-3xl text-foreground">Viewing Offline Sessions</h2>
-              <ol className="list-decimal list-outside pl-6 space-y-8">
+              <ol className="list-decimal list-outside pl-6 space-y-8 text-left">
                 <li className="space-y-6">
-                  <p>To view saved sessions for a user, open their profile on the app main page.</p>
+                  <p>To view saved sessions, open a user profile from the app main page or from your workspace menu.</p>
                   <StepImage src="/images/get-started/image5.png" alt="User profile" sizeClassName="w-full md:w-[60%] lg:w-[55%] xl:w-[50%]"/>
                 </li>
                 <li className="space-y-6">
                   <p>
-                    Navigate to <strong>Past Sessions</strong> and click the play icon.
+                    Go to <strong>Sessions</strong> and click the play icon.
                   </p>
+                  <StepImage src="/images/get-started/image23.png" alt="Session replays in workspace" sizeClassName="w-full md:w-[55%] lg:w-[50%] xl:w-[45%]" />
                   <StepImage src="/images/get-started/image9.png" alt="Past sessions list" />
                 </li>
                 <li className="space-y-6">
                   <p>
-                    Start playback using the top navigation play button. The coding session plays back in near real
-                    time. Offline playback supports seeking forward and back 30 seconds.
+                    Start playback from the top navigation. Sessions replay in near real time, with 30-second skip
+                    controls.
                   </p>
                   <StepImage src="/images/get-started/image3.png" alt="Playback controls" sizeClassName="w-full md:w-[40%] lg:w-[35%] xl:w-[30%]"/>
                   <StepImage src="/images/get-started/image8.png" alt="Playback timeline" sizeClassName="w-full md:w-[40%] lg:w-[35%] xl:w-[30%]"/>
                 </li>
-                <li>
-                  At any point, you can switch files and branches. This pauses playback. To resume host navigation,
-                  press <strong>Play</strong>.
+                <li className="space-y-6">
+                  <p>
+                    You can switch files and branches at any point. Playback pauses automatically; press{" "}
+                    <strong>Play</strong> to continue.
+                  </p>
+                </li>
+              </ol>
+            </section>
+
+            <section className="space-y-6">
+              <h2 className="font-heading font-bold text-2xl sm:text-3xl text-foreground">
+                Adding Comments and Exporting to Gist
+              </h2>
+              <ol className="list-decimal list-outside pl-6 space-y-8 text-left">
+                <li className="space-y-6">
+                  <p>
+                    Hosts can add comments in recorded sessions, and in live sessions with host-approved comments shown
+                    to everyone.
+                  </p>
+                  <StepImage src="/images/get-started/image18.png" alt="Insert comment action" sizeClassName="w-full md:w-[55%] lg:w-[50%] xl:w-[45%]" />
+                  <StepImage src="/images/get-started/image19.png" alt="Insert comment dialog" sizeClassName="w-full md:w-[65%] lg:w-[60%] xl:w-[55%]" />
+                </li>
+                <li className="space-y-6">
+                  <p>
+                    To export to Gist, first sign in to GitHub. Then jump to any point in the session and export those
+                    files directly to a Gist.
+                  </p>
+                  <StepImage src="/images/get-started/image20.png" alt="Export to gist action" sizeClassName="w-full md:w-[55%] lg:w-[50%] xl:w-[45%]" />
+                  <StepImage src="/images/get-started/image21.png" alt="Export gist panel" />
                 </li>
               </ol>
             </section>
