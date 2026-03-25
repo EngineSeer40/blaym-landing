@@ -91,7 +91,7 @@ export function Hero() {
             />
           </div>
           <Button variant="default" size="default" type="submit" disabled={isSubmitting} className="hover:bg-purple hover:text-purple-foreground">
-            {isSubmitting ? "Joining..." : "Join the Waitlist"}
+            {isSubmitting ? "Joining..." : "Join the closed Beta now"}
           </Button>
         </form>
         <div className="mt-16 flex flex-col items-center gap-6">

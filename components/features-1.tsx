@@ -39,8 +39,8 @@ export function Features1() {
                 <Icon icon="lucide:circle-check" className="size-4 text-primary" />
               </div>
               <p className="text-base text-foreground">
-                Stream your coding process live, allowing others to learn from your workflow and
-                techniques.
+                Record your coding process either in a solo or live session, 
+                rewind to checkpoints, branch, replay and bounce out to Gist.
               </p>
             </div>
             <div className="flex items-start gap-2">
@@ -49,7 +49,7 @@ export function Features1() {
               </div>
               <p className="text-base text-foreground">
                 Showcase your projects with interactive replays, making your code accessible and
-                engaging for potential employers or collaborators.
+                engaging for collaborators and team mates.
               </p>
             </div>
             <div className="flex items-start gap-2">
@@ -57,8 +57,8 @@ export function Features1() {
                 <Icon icon="lucide:circle-check" className="size-4 text-primary" />
               </div>
               <p className="text-base text-foreground">
-                Build a dynamic portfolio of your coding sessions, demonstrating your skills and
-                expertise in a unique and compelling way.
+                Build a dynamic portfolio of your coding sessions, share to the community 
+                or just have a backup for when things go sideways.
               </p>
             </div>
           </div>

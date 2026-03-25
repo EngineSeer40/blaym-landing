@@ -38,10 +38,9 @@ export function Faq() {
                 </AccordionTrigger>
                 <AccordionContent className="p-6 pt-0">
                   <p className="text-muted-foreground text-base">
-                    Blaym is a platform for developers to stream their coding process, showcase
-                    their work, and replay coding sessions. It works by capturing your coding
-                    activity and allowing you to share it with others, making code exploration
-                    transparent and engaging.
+                    Blaym is a development layer for coders to record, branch or rewind their files, 
+                    and replay their sessions. You can then review, share, or bounce to traditional 
+                    version control systems.
                   </p>
                 </AccordionContent>
               </AccordionItem>
@@ -59,8 +58,7 @@ export function Faq() {
                 </AccordionTrigger>
                 <AccordionContent className="p-6 pt-0">
                   <p className="text-muted-foreground text-base">
-                    Yes, we offer a free trial so you can experience Blaym's features. Sign up to
-                    get started.
+                    We are currently in closed beta and you can get an activation code from the request form above.
                   </p>
                 </AccordionContent>
               </AccordionItem>
@@ -80,10 +78,9 @@ export function Faq() {
                 </AccordionTrigger>
                 <AccordionContent className="p-6 pt-0">
                   <p className="text-muted-foreground text-base">
-                    Unlike traditional screen recording, Blaym focuses on the coding process itself.
-                    We provide features like searchable code, interactive replays, and a
-                    developer-focused community, making code exploration more engaging and
-                    efficient.
+                    Unlike traditional screen recording, Blaym focuses on the coding itself, with 
+                    features like searchable code, interactive replays, and integrations with Gist, 
+                    making code exploration more engaging and interactive.
                   </p>
                 </AccordionContent>
               </AccordionItem>
@@ -106,26 +103,6 @@ export function Faq() {
                     Getting started with Blaym is quick and easy. Simply sign up, install the Blaym
                     extension, and start streaming your coding sessions. You'll be sharing your work
                     in minutes.
-                  </p>
-                </AccordionContent>
-              </AccordionItem>
-            </CardContent>
-          </Card>
-          <Card className="shadow-none py-0">
-            <CardContent className="px-0">
-              <AccordionItem value="bXHVGA93pTY" className="border-b-0">
-                <AccordionTrigger className="hover:no-underline items-center p-6">
-                  <span className="font-semibold text-base">How can I get support?</span>
-                  <Icon
-                    icon="lucide:chevron-down"
-                    className="size-4 transition-transform duration-200"
-                  />
-                </AccordionTrigger>
-                <AccordionContent className="p-6 pt-0">
-                  <p className="text-muted-foreground text-base">
-                    You can find support through our documentation, community forums, or by
-                    contacting our support team directly via email. We're here to help you every
-                    step of the way.
                   </p>
                 </AccordionContent>
               </AccordionItem>
